@@ -5,7 +5,7 @@ module Spree
 
     UNACTIVATABLE_ORDER_STATES = ["complete", "awaiting_return", "returned"]
 
-    attr_accessible :email, :name, :note, :variant_id
+    #attr_accessible :email, :name, :note, :variant_id
 
     belongs_to :variant
     belongs_to :line_item
@@ -23,6 +23,13 @@ module Spree
     before_validation :set_values, on: :create
 
     include Spree::Core::CalculatedAdjustments
+
+
+    class << self
+      def updatable_attrs
+        [:email, :name, :note, :variant_id]
+      end
+    end
 
     def apply(order)
       # Nothing to do if the gift card is already associated with the order
