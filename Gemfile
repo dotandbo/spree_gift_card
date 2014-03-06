@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
-gem 'spree', github: 'spree/spree', branch: '2-0-stable'
+gem 'spree', github: 'dotandbo/spree', branch: '2-1-stable-dotandbo'
 gemspec

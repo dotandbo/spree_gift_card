@@ -1,6 +1,5 @@
 Spree::Order.class_eval do
 
-  attr_accessible :gift_code
   attr_accessor :gift_code
 
   # Finalizes an in progress order after checkout is complete.
