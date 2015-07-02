@@ -1,7 +1,7 @@
 require_dependency 'spree/calculator'
 
 module Spree
-  class Calculator < ActiveRecord::Base
+  class Calculator < Spree::Base
     class GiftCard < Calculator
 
       def self.description
